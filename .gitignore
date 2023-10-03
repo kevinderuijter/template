@@ -1,0 +1,23 @@
+# Python
+.venv
+__pycache__
+*.egg-info
+instance
+dist
+build
+
+# Large files
+*.tar
+*.gz
+*.log
+
+# Node
+node_modules
+package-lock.json
+
+# macOS
+.DS_Store
+._*
+
+# Environment
+.env
