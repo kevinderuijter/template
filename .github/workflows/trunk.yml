@@ -1,0 +1,28 @@
+---
+name: Trunk
+
+permissions: read-all
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  trunk_check:
+    name: Trunk Check Runner
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1

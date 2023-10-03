@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project]
+name = "template"
+version = "0.0.1"
+dynamic = ["dependencies"]
+authors = [{ name = "Kevin de Ruijter", email = "kevinderuijter@icloud.com" }]
+description = "Template for Python projects."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
+
+[tool.black]
+line-length = 79
