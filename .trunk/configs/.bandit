@@ -1,0 +1,3 @@
+[bandit]
+# B101: Byte code optimization of assert doesn't matter.
+skips = B101
