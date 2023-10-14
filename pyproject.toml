@@ -20,3 +20,7 @@ files = ["requirements.txt"]
 
 [tool.black]
 line-length = 79
+
+[tool.pyright]
+reportMissingImports = false      # Doesn't recognize installed packages.
+reportMissingModuleSource = false # Doesn't recognize installed packages.
